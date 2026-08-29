@@ -1298,6 +1298,9 @@
       background-color: color-mix(in oklab, var(--color-indigo-900) 30%, transparent);
     }
   }
+  .dark\:bg-indigo-950:where(.dark, .dark *) {
+    background-color: var(--color-indigo-950);
+  }
   .dark\:bg-slate-800:where(.dark, .dark *) {
     background-color: var(--color-slate-800);
   }
