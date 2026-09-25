@@ -2,13 +2,26 @@ import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+//Importa módulo
 import './App.css'
+import Footer from './core/Footer.tsx'
+import Header from './core/Header.tsx'
+import Experiencia from './core/Experiencia.tsx'
+import Educacion from './core/Educacion.tsx'
+import Habilidades from './core/Habilidades.tsx'
+import Certificaciones from './core/Certificaciones.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  //Siempre react espera a que todo esté metido en un solo tag '<>'
   return (
     <>
+      <Header />
+      <Experiencia />
+      <Educacion />
+      <Habilidades />
+      <Certificaciones />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -115,6 +128,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <Footer />
     </>
   )
 }
