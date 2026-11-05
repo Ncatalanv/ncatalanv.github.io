@@ -1,0 +1,32 @@
+{
+  "name": "Nicolás Ignacio Catalán Valenzuela",
+  "role": "Estudiante de Ingeniería en Informática",
+  "tagline": "Desarrollo web, datos y automatización",
+  "bio": "Estudiante de Ingeniería en Informática en Duoc UC, con experiencia previa en kinesiología y en gestión administrativa. Me interesa construir aplicaciones web claras, accesibles y centradas en el usuario, además del análisis de datos como herramienta de decisión.",
+  "about": [
+    "Soy Nicolás Catalán, estudiante de Ingeniería en Informática en Duoc UC. Vengo de la carrera de Kinesiología, lo que me dio una base sólida en comunicación, trabajo con personas y resolución de problemas bajo presión.",
+    "Actualmente trabajo en el área administrativa de una importadora, donde gestiono inventario, facturación y registros financieros. Esa experiencia me llevó a interesarme por la automatización de procesos y el análisis de datos.",
+    "Disfruto aprender construyendo: este portafolio es parte de ese proceso. Me interesan el desarrollo frontend con React y TypeScript, las buenas prácticas de accesibilidad y las pruebas automatizadas."
+  ],
+  "email": "ncatalan111@gmail.com",
+  "phone": "+569 81661868",
+  "location": "Santiago, Chile",
+  "avatar": "/images/profile/polar.jpg",
+  "interests": [
+    "Desarrollo frontend",
+    "Análisis de datos",
+    "Accesibilidad web",
+    "Automatización de procesos",
+    "Inteligencia artificial"
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Ncatalanv"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ncatalan-data/"
+    }
+  ]
+}

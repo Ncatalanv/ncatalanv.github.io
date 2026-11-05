@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Portafolio Personal">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#g)" />
+  <circle cx="520" cy="80" r="120" fill="#ffffff" opacity="0.12" />
+  <circle cx="120" cy="330" r="150" fill="#ffffff" opacity="0.08" />
+  <rect x="64" y="80" width="240" height="16" rx="8" fill="#ffffff" opacity="0.9" />
+  <rect x="64" y="116" width="360" height="10" rx="5" fill="#ffffff" opacity="0.55" />
+  <rect x="64" y="138" width="300" height="10" rx="5" fill="#ffffff" opacity="0.4" />
+  <rect x="64" y="196" width="132" height="40" rx="20" fill="#ffffff" opacity="0.95" />
+  <text x="64" y="300" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Portafolio Personal</text>
+  <text x="64" y="332" font-family="Segoe UI, sans-serif" font-size="18" fill="#ffffff" opacity="0.75">React · TypeScript · Tailwind CSS</text>
+</svg>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "certificacion-google-data-analytics",
+    "title": "Certificación Google Data Analytics completada",
+    "date": "2024-03-20",
+    "summary": "Finalicé el programa de Google Data Analytics, con foco en limpieza de datos, SQL, visualización y comunicación de resultados.",
+    "category": "academica"
+  },
+  {
+    "id": "pcep-python",
+    "title": "Aprobación de la certificación PCEP de Python",
+    "date": "2025-05-15",
+    "summary": "Obtuve la certificación PCEP - Certified Entry-Level Python Programmer, validando fundamentos de sintaxis, estructuras de datos y funciones.",
+    "category": "academica"
+  },
+  {
+    "id": "azure-data-fundamentals",
+    "title": "Microsoft Azure Data Fundamentals",
+    "date": "2025-08-10",
+    "summary": "Completé la certificación Azure Data Fundamentals, cubriendo conceptos de almacenamiento, procesamiento y análisis de datos en la nube.",
+    "category": "academica"
+  },
+  {
+    "id": "react-19-compiler",
+    "title": "Explorando React 19 y su compilador",
+    "date": "2026-05-02",
+    "summary": "Migré un proyecto personal a React 19 para experimentar con el React Compiler, mejorando el rendimiento sin cambios manuales de memorización.",
+    "category": "tecnologia"
+  },
+  {
+    "id": "dashboard-ventas",
+    "title": "Publicación del panel de análisis de ventas",
+    "date": "2026-04-12",
+    "summary": "Publiqué un dashboard que automatiza la limpieza de datos y genera reportes de rotación y margen a partir de registros de ventas.",
+    "category": "tecnologia"
+  },
+  {
+    "id": "primer-lugar-hackathon",
+    "title": "Primer lugar en hackathon interno de Duoc UC",
+    "date": "2026-06-20",
+    "summary": "Junto a mi equipo obtuvimos el primer lugar con una solución de gestión de inventario para pequeños comercios, construida en 24 horas.",
+    "category": "tecnologia"
+  }
+]
