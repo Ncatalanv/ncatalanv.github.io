@@ -1,5 +1,4 @@
 //Importa módulo
-import './App.css'
 import Footer from './core/Footer.tsx'
 import Header from './core/Header.tsx'
 import Experiencia from './core/Experiencia.tsx'
