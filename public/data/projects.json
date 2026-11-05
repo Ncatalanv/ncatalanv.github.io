@@ -1,0 +1,48 @@
+[
+  {
+    "id": "portafolio-personal",
+    "title": "Portafolio Personal",
+    "description": "Sitio personal construido desde cero con React, TypeScript y Tailwind CSS. Incluye modo oscuro persistente, carga de contenido desde archivos JSON y pruebas unitarias.",
+    "image": "/images/projects/portfolio.svg",
+    "imageAlt": "Ilustración del proyecto Portafolio Personal",
+    "tech": ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    "demoUrl": "https://ncatalanv.github.io/",
+    "repoUrl": "https://github.com/Ncatalanv/ncatalanv.github.io",
+    "year": 2026,
+    "featured": true
+  },
+  {
+    "id": "panel-analisis-datos",
+    "title": "Panel de Análisis de Ventas",
+    "description": "Dashboard que procesa datos de ventas y genera indicadores de rotación, margen y estacionalidad. Automatiza la limpieza de datos y la generación de reportes periódicos.",
+    "image": "/images/projects/dashboard.svg",
+    "imageAlt": "Ilustración del panel de análisis de ventas",
+    "tech": ["Python", "Pandas", "SQL", "Power BI"],
+    "repoUrl": "https://github.com/Ncatalanv",
+    "year": 2026,
+    "featured": true
+  },
+  {
+    "id": "gestion-inventario",
+    "title": "Sistema de Gestión de Inventario",
+    "description": "Aplicación para registrar productos, controlar stock y emitir alertas de reposición. Incluye autenticación de usuarios y trazabilidad de movimientos.",
+    "image": "/images/projects/inventario.svg",
+    "imageAlt": "Ilustración del sistema de gestión de inventario",
+    "tech": ["Java", "Spring Boot", "MySQL", "REST API"],
+    "repoUrl": "https://github.com/Ncatalanv",
+    "year": 2025,
+    "featured": false
+  },
+  {
+    "id": "clasificador-imagenes",
+    "title": "Clasificador de Imágenes con IA",
+    "description": "Modelo de visión computacional entrenado para clasificar imágenes en categorías predefinidas, con una interfaz simple para probar predicciones en el navegador.",
+    "image": "/images/projects/clasificador.svg",
+    "imageAlt": "Ilustración del clasificador de imágenes con IA",
+    "tech": ["Python", "TensorFlow", "NumPy", "Streamlit"],
+    "demoUrl": "https://github.com/Ncatalanv",
+    "repoUrl": "https://github.com/Ncatalanv",
+    "year": 2025,
+    "featured": false
+  }
+]

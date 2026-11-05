@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Panel de Análisis de Ventas">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#g)" />
+  <rect x="64" y="220" width="48" height="100" rx="6" fill="#ffffff" opacity="0.9" />
+  <rect x="132" y="170" width="48" height="150" rx="6" fill="#ffffff" opacity="0.75" />
+  <rect x="200" y="140" width="48" height="180" rx="6" fill="#ffffff" opacity="0.9" />
+  <rect x="268" y="190" width="48" height="130" rx="6" fill="#ffffff" opacity="0.6" />
+  <rect x="336" y="110" width="48" height="210" rx="6" fill="#ffffff" opacity="0.85" />
+  <circle cx="500" cy="180" r="86" fill="none" stroke="#ffffff" stroke-width="22" opacity="0.35" />
+  <circle cx="500" cy="180" r="86" fill="none" stroke="#ffffff" stroke-width="22" stroke-dasharray="300 540" opacity="0.9" />
+  <text x="64" y="90" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Panel de Análisis de Ventas</text>
+  <text x="64" y="122" font-family="Segoe UI, sans-serif" font-size="18" fill="#ffffff" opacity="0.75">Python · Pandas · SQL · Power BI</text>
+</svg>

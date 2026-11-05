@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Clasificador de Imágenes con IA">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#g)" />
+  <g stroke="#ffffff" stroke-width="3" opacity="0.7" fill="none">
+    <circle cx="180" cy="150" r="16" />
+    <circle cx="300" cy="110" r="16" />
+    <circle cx="420" cy="150" r="16" />
+    <circle cx="240" cy="250" r="16" />
+    <circle cx="360" cy="250" r="16" />
+    <line x1="180" y1="150" x2="300" y2="110" />
+    <line x1="300" y1="110" x2="420" y2="150" />
+    <line x1="180" y1="150" x2="240" y2="250" />
+    <line x1="240" y1="250" x2="360" y2="250" />
+    <line x1="360" y1="250" x2="420" y2="150" />
+    <line x1="300" y1="110" x2="360" y2="250" />
+    <line x1="180" y1="150" x2="360" y2="250" />
+  </g>
+  <text x="80" y="330" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Clasificador con IA</text>
+  <text x="80" y="360" font-family="Segoe UI, sans-serif" font-size="18" fill="#ffffff" opacity="0.8">Python · TensorFlow · NumPy</text>
+</svg>
