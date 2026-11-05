@@ -1,8 +1,13 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import ContactForm from '../../src/components/ContactForm.tsx'
+import { waitUntil } from '../helpers/waitUntil.ts'
 
 function getForm(): HTMLFormElement {
   return screen.getByRole('button', { name: /enviar/i }).closest('form') as HTMLFormElement
+}
+
+function statusText(): string {
+  return screen.getByRole('status').textContent ?? ''
 }
 
 describe('ContactForm', () => {
@@ -45,23 +50,20 @@ describe('ContactForm', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /enviar/i }))
 
-    await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledWith({
-        name: 'Nicolás Catalán',
-        email: 'nicolas@example.com',
-        message: 'Hola, me interesa colaborar en un proyecto.',
-      })
-    })
+    await waitUntil(() => statusText().includes('Gracias'))
 
-    await waitFor(() => {
-      expect(screen.getByRole('status').textContent).toContain('Gracias')
+    expect(onSubmit).toHaveBeenCalledWith({
+      name: 'Nicolás Catalán',
+      email: 'nicolas@example.com',
+      message: 'Hola, me interesa colaborar en un proyecto.',
     })
+    expect(statusText()).toContain('Gracias')
   })
 
   it('muestra un mensaje de error si el envío falla', async () => {
-    const onSubmit = jasmine.createSpy('onSubmit').and.callFake(() => {
-      throw new Error('falló')
-    })
+    const onSubmit = jasmine
+      .createSpy('onSubmit')
+      .and.callFake(() => Promise.reject(new Error('falló')))
 
     render(<ContactForm onSubmit={onSubmit} />)
 
@@ -77,8 +79,8 @@ describe('ContactForm', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /enviar/i }))
 
-    await waitFor(() => {
-      expect(screen.getByRole('status').textContent).toContain('No se pudo enviar')
-    })
+    await waitUntil(() => statusText().includes('No se pudo enviar'))
+
+    expect(statusText()).toContain('No se pudo enviar')
   })
 })

@@ -75,6 +75,11 @@ module.exports = function (config) {
         flags: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
       },
     },
+    client: {
+      jasmine: {
+        random: false,
+      },
+    },
     singleRun: true,
     autoWatch: false,
     browserNoActivityTimeout: 60000,
