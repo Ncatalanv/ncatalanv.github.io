@@ -96,6 +96,9 @@ function Hero({ profile, loading, error, onRetry }: HeroProps) {
                   alt={`Fotografía de ${profile.name}`}
                   width={240}
                   height={240}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="mx-auto h-full w-full rounded-full bg-slate-200 object-cover dark:bg-slate-800"
                 />
               </div>
