@@ -1,10 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ncatalanv Page</title>
+    <meta
+      name="description"
+      content="Portafolio de Nicolás Ignacio Catalán Valenzuela, estudiante de Ingeniería en Informática y desarrollador de software."
+    />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>Nicolás Catalán Valenzuela | Portafolio</title>
+    <script>
+      // Evita el parpadeo de tema al cargar la página.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)',
+          ).matches
+          var isDark = stored ? stored === 'dark' : prefersDark
+          document.documentElement.classList.toggle('dark', isDark)
+        } catch (error) {
+          document.documentElement.classList.remove('dark')
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
