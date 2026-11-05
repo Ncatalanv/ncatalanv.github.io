@@ -49,6 +49,10 @@ function Button({
   'aria-label': ariaLabel,
 }: ButtonProps) {
   const classes = cn(baseClasses, variantClasses[variant], sizeClasses[size], className)
+  const opensInNewTab = target === '_blank'
+  const newTabHint = ' (abre en una nueva pestaña)'
+  const computedAriaLabel =
+    opensInNewTab && ariaLabel ? `${ariaLabel}${newTabHint}` : ariaLabel
 
   if (href) {
     return (
@@ -58,9 +62,10 @@ function Button({
         target={target}
         rel={rel}
         onClick={onClick}
-        aria-label={ariaLabel}
+        aria-label={computedAriaLabel}
       >
         {children}
+        {opensInNewTab ? <span className="sr-only">{newTabHint}</span> : null}
       </a>
     )
   }
