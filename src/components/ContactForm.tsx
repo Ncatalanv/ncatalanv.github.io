@@ -95,6 +95,8 @@ function ContactForm({ onSubmit }: ContactFormProps) {
           name="name"
           type="text"
           autoComplete="name"
+          required
+          aria-required="true"
           value={values.name}
           onChange={handleChange('name')}
           aria-invalid={Boolean(errors.name)}
@@ -120,6 +122,8 @@ function ContactForm({ onSubmit }: ContactFormProps) {
           name="email"
           type="email"
           autoComplete="email"
+          required
+          aria-required="true"
           value={values.email}
           onChange={handleChange('email')}
           aria-invalid={Boolean(errors.email)}
@@ -144,6 +148,8 @@ function ContactForm({ onSubmit }: ContactFormProps) {
           id="contact-message"
           name="message"
           rows={5}
+          required
+          aria-required="true"
           value={values.message}
           onChange={handleChange('message')}
           aria-invalid={Boolean(errors.message)}
