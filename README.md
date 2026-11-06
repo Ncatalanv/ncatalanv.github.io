@@ -145,7 +145,7 @@ El resultado queda en `dist/`. Para revisarlo localmente:
 npm run preview
 ```
 
-Para publicar en GitHub Pages se debe desplegar **el contenido generado en `dist/`**, no los archivos fuente de React. Esto puede hacerse mediante un workflow de GitHub Actions que ejecute `npm ci` y `npm run build`, o publicando ese directorio en una rama de despliegue.
+Para publicar en GitHub Pages se debe desplegar **el contenido generado en `dist/`**, no los archivos fuente de React. El repositorio incluye `.github/workflows/deploy.yml`, que ejecuta `npm ci` y `npm run build` en cada push a `main` y publica `dist/` mediante GitHub Actions. Para activarlo, selecciona **GitHub Actions** en **Settings → Pages → Build and deployment → Source**.
 
 Al tratarse del sitio de usuario `ncatalanv.github.io`, la configuración actual usa rutas relativas a la raíz del sitio.
 
