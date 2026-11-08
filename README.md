@@ -1,78 +1,89 @@
-# React + TypeScript + Vite
+# Portafolio Personal - Nicolás Ignacio Catalán Valenzuela
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio web desarrollado con **React + TypeScript + Vite + Bootstrap** para la asignatura de FullStack II.
 
-Currently, two official plugins are available:
+## Tecnologías principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- TypeScript
+- Vite
+- Bootstrap 5 + React-Bootstrap
+- Karma + Jasmine (pruebas unitarias)
 
-## React Compiler
+## Requisitos cumplidos
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Componentes estándar de Bootstrap: `Navbar`, `Card`, `Button`, `Form`, `Container`, `Row`, `Col`.
+- Sistema de cuadrícula (Grid System) de Bootstrap.
+- Componentes React personalizados reutilizables con `props`:
+  - `SobreMi`
+  - `ProyectoCard`
+  - `NoticiaCard`
+- Secciones del portafolio:
+  - **Introducción / Sobre mí**: nombre, foto profesional, biografía y formulario de contacto.
+  - **Proyectos**: 4 proyectos con imagen, título, descripción, tecnologías, demo y repositorio.
+  - **Noticias**: 2 secciones cargadas dinámicamente desde `public/data/news.json`.
+- Carga de datos desde archivos JSON usando `useState`, `useEffect` y `fetch`.
+- Pruebas unitarias con Jasmine y Karma:
+  - Renderizado de componentes.
+  - Manejo de eventos y estados.
+  - Interacción con el DOM.
+  - Cobertura de código con `karma-coverage`.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Scripts disponibles
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev        # Iniciar servidor de desarrollo
+npm run build      # Construir para producción
+npm run preview    # Previsualizar build de producción
+npm run lint       # Ejecutar ESLint
+npm test           # Ejecutar pruebas con Karma (modo watch)
+npm run test:headless  # Ejecutar pruebas una sola vez en Chrome Headless
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estructura de carpetas
 
 ```
+src/
+├── components/       # Componentes reutilizables
+│   ├── navbar/
+│   ├── sobre-mi/
+│   ├── proyectos/
+│   ├── noticias/
+│   └── footer/
+├── core/             # Secciones del CV
+│   ├── Experiencia.tsx
+│   ├── Educacion.tsx
+│   ├── Habilidades.tsx
+│   └── Certificaciones.tsx
+├── tests/            # Pruebas unitarias Jasmine
+├── types/            # Tipos de TypeScript
+├── App.tsx
+└── main.tsx
+public/
+└── data/             # Archivos JSON de datos
+    ├── projects.json
+    └── news.json
+```
+
+## Datos personales
+
+- **Nombre:** Nicolás Ignacio Catalán Valenzuela
+- **Ubicación:** Santiago, Chile
+- **Email:** ncatalan111@gmail.com
+- **Teléfono:** +56 (9) 8166 1868
+- **LinkedIn:** https://www.linkedin.com/in/ncatalan-data/
+- **GitHub:** https://github.com/Ncatalanv
+
+## Resultados de pruebas
+
+```
+TOTAL: 17 SUCCESS
+
+Coverage summary
+Statements   : 85.1% ( 80/94 )
+Branches     : 69.44% ( 25/36 )
+Functions    : 88.46% ( 23/26 )
+Lines        : 84.52% ( 71/84 )
+```
+
+El reporte HTML de cobertura se genera en la carpeta `coverage/html/`.
