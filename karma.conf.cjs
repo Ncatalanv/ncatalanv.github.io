@@ -2,6 +2,12 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
+    plugins: [
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      'karma-webpack',
+      'karma-coverage',
+    ],
     files: [
       'src/tests/**/*.spec.tsx',
       'src/tests/**/*.spec.ts',
@@ -29,6 +35,17 @@ module.exports = function (config) {
               },
             ],
             exclude: /node_modules/,
+          },
+          {
+            test: /\.tsx?$/,
+            enforce: 'post',
+            exclude: /node_modules|\.spec\.(ts|tsx)$/,
+            use: {
+              loader: 'coverage-istanbul-loader',
+              options: {
+                esModules: true,
+              },
+            },
           },
           {
             test: /\.css$/,
