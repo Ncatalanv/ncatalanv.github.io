@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Sistema de Documentación Aduanera (AduanaÁgil)",
+    "description": "Prototipo web centralizado para la gestión de documentos aduaneros, permitiendo organizar, consultar y dar seguimiento a la tramitación de importaciones de forma eficiente.",
+    "technologies": ["Java", "Spring Boot", "MVC", "Thymeleaf", "MySQL"],
+    "image": "https://placehold.co/600x400/0d6efd/ffffff?text=AduanaAgil",
+    "demoUrl": "https://github.com/Ncatalanv",
+    "repoUrl": "https://github.com/Ncatalanv"
+  },
+  {
+    "id": 2,
+    "title": "Portal Web Corporativo (mrtributario.cl)",
+    "description": "Portal de servicios contables desplegado en la nube con alta disponibilidad, gestión dinámica de contenido y optimización de rendimiento mediante CDN.",
+    "technologies": ["Vercel", "Cloudflare", "Sanity CMS", "Next.js", "React"],
+    "image": "https://placehold.co/600x400/6610f2/ffffff?text=MrTributario",
+    "demoUrl": "https://mrtributario.cl",
+    "repoUrl": "https://github.com/Ncatalanv"
+  },
+  {
+    "id": 3,
+    "title": "Automatización RPA de Despachos (Resto POS)",
+    "description": "Ejecutable en Python orientado a la lectura e ingreso automatizado de recibos y comprobantes de entrega en el sistema POS, reduciendo el procesamiento manual.",
+    "technologies": ["Python", "PyAutoGUI", "RPA", "SQLite"],
+    "image": "https://placehold.co/600x400/198754/ffffff?text=RestoPOS",
+    "demoUrl": "https://github.com/Ncatalanv",
+    "repoUrl": "https://github.com/Ncatalanv"
+  },
+  {
+    "id": 4,
+    "title": "Microservicios en Contenedores: Bot de Discord",
+    "description": "Bot interactivo de estado de voz para Discord, contenerizado con Docker y desarrollado en Python para garantizar la consistencia del entorno de ejecución.",
+    "technologies": ["Python", "Docker", "Discord API", "Microservicios"],
+    "image": "https://placehold.co/600x400/dc3545/ffffff?text=DiscordBot",
+    "demoUrl": "https://github.com/Ncatalanv",
+    "repoUrl": "https://github.com/Ncatalanv"
+  }
+]

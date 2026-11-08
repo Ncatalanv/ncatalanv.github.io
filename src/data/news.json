@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "section": 1,
+    "title": "Nuevas certificaciones en cloud y datos",
+    "date": "2025-08-15",
+    "content": "Se completaron las certificaciones Microsoft Certified: Azure Fundamentals y Data Fundamentals, consolidando competencias en computación en la nube y análisis de datos."
+  },
+  {
+    "id": 2,
+    "section": 1,
+    "title": "Especialización en automatización RPA",
+    "date": "2025-06-10",
+    "content": "Desarrollo de soluciones de automatización robótica de procesos con Python y PyAutoGUI para optimizar tareas administrativas y operativas."
+  },
+  {
+    "id": 3,
+    "section": 2,
+    "title": "Proyectos full-stack con Spring Boot y React",
+    "date": "2025-09-22",
+    "content": "Construcción de aplicaciones web escalables combinando backends en Java/Spring Boot con frontends modernos en React y Next.js."
+  },
+  {
+    "id": 4,
+    "section": 2,
+    "title": "Despliegue continuo con Vercel y Cloudflare",
+    "date": "2025-07-30",
+    "content": "Implementación de portales corporativos con gestión dinámica de contenido, CDN y despliegue serverless para alto rendimiento."
+  }
+]
