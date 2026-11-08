@@ -1,54 +1,84 @@
-function Experiencia(){
-    return(
-        <section id="cv">
-    <h2 className="font-serif text-4xl sm:text-5xl mb-12 text-indigo-500 dark:text-indigo-400">Experiencia</h2>
-    
-    <ol className="relative space-y-12 before:absolute before:-ms-px before:h-full before:w-0.5 before:rounded-full before:bg-slate-300 dark:before:bg-slate-700 ml-2 sm:ml-4">
-        
-        <li className="relative -ms-1.5 flex items-start gap-6">
-            <span className="size-3 mt-1.5 shrink-0 rounded-full bg-indigo-500 dark:bg-indigo-400 ring-4 ring-slate-50 dark:ring-slate-950"></span>
-            
-            <div className="-mt-0.5">
-                <time className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">2024 - Presente</time>
-                
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-1">Asistente Administrativo</h3>
-                <h4 className="text-base font-medium text-slate-600 dark:text-slate-400 mb-4">Comercializadora e Importadora INCORPLAS SPA</h4>
-                
-                <ul className="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
-                    <li>Controlé de manera integral el inventario físico y los niveles de stock, asegurando la disponibilidad continua de productos y optimizando la rotación de mercancía.</li>
-                    <li>Procesé el ingreso de facturas y administré los registros financieros, garantizando la exactitud, el orden y la trazabilidad de la información contable de la empresa.</li>
-                </ul>
-            </div>
-        </li>
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 
-        <li className="relative -ms-1.5 flex items-start gap-6">
-            <span className="size-3 mt-1.5 shrink-0 rounded-full bg-indigo-500 dark:bg-indigo-400 ring-4 ring-slate-50 dark:ring-slate-950"></span>
-            
-            <div className="-mt-0.5">
-                <time className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">2024 - 2026</time>
-                
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-1">Operario de local</h3>
-                <h4 className="text-base font-medium text-slate-600 dark:text-slate-400 mb-4">Comidas La Punta</h4>
-                
-                <ul className="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
-                    <li>Gestioné eficientemente el ciclo completo de atención al cliente, desde la toma de pedidos hasta la entrega final, asegurando altos estándares de calidad y tiempos de respuesta óptimos.</li>
-                    <li>Resolví incidencias y requerimientos de manera proactiva, aplicando técnicas de comunicación asertiva para garantizar la máxima satisfacción del cliente.</li>
-                    <li>Colaboré estrechamente con el equipo de operaciones para agilizar el flujo de trabajo, manteniendo la precisión en el servicio durante periodos de alta demanda.</li>
-                    <li>Fomenté la fidelización de clientes mediante una atención personalizada y un seguimiento constante, construyendo relaciones basadas en la confianza y la hospitalidad.</li>
-                </ul>
-            </div>
-        </li>
-        
-    </ol>
-</section>
-
-
-
-
-
-
-
-    )
+interface Experience {
+  id: number;
+  period: string;
+  title: string;
+  company: string;
+  achievements: string[];
+  technologies: string[];
 }
 
-export default Experiencia
+const experiences: Experience[] = [
+  {
+    id: 1,
+    period: 'Feb. 2024 - Presente',
+    title: 'Desarrollador de Software / Asistente Administrativo',
+    company: 'Comercializadora e Importadora INCORPLAS SPA',
+    achievements: [
+      'Diseñé y desarrollé un dashboard financiero y de inventario integrando React, Spring Boot y FastAPI, agilizando las operaciones administrativas diarias.',
+      'Implementé una arquitectura de base de datos dual (MySQL y SQLite) para optimizar la gestión de existencias, reduciendo significativamente la latencia de las consultas del sistema.',
+      'Automaticé los flujos de trabajo de ingreso de facturas y registros financieros mediante scripts, eliminando los errores derivados de la introducción manual de datos.',
+    ],
+    technologies: ['React', 'Spring Boot', 'FastAPI', 'MySQL', 'SQLite'],
+  },
+  {
+    id: 2,
+    period: 'Ago. 2023 - Presente',
+    title: 'Operario de Local y Automatizador de Procesos',
+    company: 'Comidas La Punta',
+    achievements: [
+      'Desarrollé un script de RPA utilizando Python y PyAutoGUI para automatizar el procesamiento de comprobantes de entrega en el sistema POS.',
+      'Logré reducir el tiempo de procesamiento manual de datos en un 45%, mejorando la eficiencia operativa en horas de alta demanda.',
+      'Gestioné tareas de atención al cliente y resolución de incidencias tecnológicas de manera ágil en un entorno dinámico.',
+    ],
+    technologies: ['Python', 'PyAutoGUI', 'RPA'],
+  },
+];
+
+function Experiencia() {
+  return (
+    <section id="experiencia" className="py-5 bg-light" data-testid="experience-section">
+      <Container>
+        <h2 className="text-center mb-5">Experiencia Laboral</h2>
+        <Row className="g-4">
+          {experiences.map((exp) => (
+            <Col md={6} key={exp.id}>
+              <Card className="h-100 shadow-sm" data-testid={`experience-card-${exp.id}`}>
+                <Card.Body>
+                  <Card.Subtitle className="mb-2 text-muted" data-testid={`experience-period-${exp.id}`}>
+                    {exp.period}
+                  </Card.Subtitle>
+                  <Card.Title data-testid={`experience-title-${exp.id}`}>{exp.title}</Card.Title>
+                  <Card.Subtitle className="mb-3 text-primary" data-testid={`experience-company-${exp.id}`}>
+                    {exp.company}
+                  </Card.Subtitle>
+                  <ul className="ps-3">
+                    {exp.achievements.map((achievement, index) => (
+                      <li key={index} className="mb-2">
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-3" data-testid={`experience-tech-${exp.id}`}>
+                    {exp.technologies.map((tech) => (
+                      <Badge bg="info" className="me-1 mb-1" key={tech}>
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+}
+
+export default Experiencia;

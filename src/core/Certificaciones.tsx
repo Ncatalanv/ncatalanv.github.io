@@ -1,45 +1,53 @@
-function Certificaciones(){
-    return(
-        <section id="certificaciones">
-    <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-indigo-500 dark:text-indigo-400">Licencias y certificaciones</h2>
-    
-    <div className="flex flex-col border-y border-slate-200 dark:border-slate-800 divide-y divide-slate-200 dark:divide-slate-800">
-        
-        <div className="group flex flex-col sm:flex-row sm:items-center justify-between py-5 px-2 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
-            <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100">Google Data Analytics</h3>
-            </div>
-            <span className="text-sm text-slate-500 dark:text-slate-400 mt-1 sm:mt-0 ml-8 sm:ml-0 font-mono">03 / 2024</span>
-        </div>
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-        <div className="group flex flex-col sm:flex-row sm:items-center justify-between py-5 px-2 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
-            <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100">PCEP - Certified Entry-Level Python Programmer</h3>
-            </div>
-            <span className="text-sm text-slate-500 dark:text-slate-400 mt-1 sm:mt-0 ml-8 sm:ml-0 font-mono">05 / 2025</span>
-        </div>
-
-        <div className="group flex flex-col sm:flex-row sm:items-center justify-between py-5 px-2 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
-            <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100">Microsoft Certified: Azure Data Fundamentals</h3>
-            </div>
-            <span className="text-sm text-slate-500 dark:text-slate-400 mt-1 sm:mt-0 ml-8 sm:ml-0 font-mono">08 / 2025</span>
-        </div>
-
-        <div className="group flex flex-col sm:flex-row sm:items-center justify-between py-5 px-2 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
-            <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-slate-100">Big Data Professional Certificate (BDPC)</h3>
-            </div>
-            <span className="text-sm text-slate-500 dark:text-slate-400 mt-1 sm:mt-0 ml-8 sm:ml-0 font-mono">10 / 2025</span>
-        </div>
-
-    </div>
-</section>
-
-    )
+interface Certification {
+  id: number;
+  name: string;
+  date: string;
 }
-export default Certificaciones
+
+const certifications: Certification[] = [
+  { id: 1, name: 'Google Data Analytics Certificate', date: 'March 2024' },
+  { id: 2, name: 'PCEP - Certified Entry-Level Python Programmer', date: 'May 2025' },
+  { id: 3, name: 'Microsoft Certified - Data Fundamentals', date: 'August 2025' },
+  { id: 4, name: 'Microsoft Certified - Azure Fundamentals', date: 'August 2025' },
+];
+
+function Certificaciones() {
+  return (
+    <section id="certificaciones" className="py-5" data-testid="certifications-section">
+      <Container>
+        <h2 className="text-center mb-5">Certificaciones</h2>
+        <Row className="justify-content-center">
+          <Col lg={8}>
+            <Card className="shadow-sm">
+              <ListGroup variant="flush">
+                {certifications.map((cert) => (
+                  <ListGroup.Item
+                    key={cert.id}
+                    className="d-flex justify-content-between align-items-center"
+                    data-testid={`certification-item-${cert.id}`}
+                  >
+                    <span data-testid={`certification-name-${cert.id}`}>{cert.name}</span>
+                    <span
+                      className="badge bg-primary rounded-pill"
+                      data-testid={`certification-date-${cert.id}`}
+                    >
+                      {cert.date}
+                    </span>
+                  </ListGroup.Item>
+                ))}
+              </ListGroup>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+}
+
+export default Certificaciones;
