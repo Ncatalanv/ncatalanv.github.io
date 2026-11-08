@@ -7,18 +7,27 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "karma start",
+    "test:headless": "karma start --single-run --browsers ChromeHeadless"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jasmine-dom": "^1.3.3",
+    "@testing-library/react": "^16.3.3",
     "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.13.3",
+    "@types/jasmine": "^7.0.0",
+    "@types/node": "^24.19.2",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
@@ -27,8 +36,18 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.6",
     "globals": "^17.12.0",
+    "jasmine-core": "^7.0.2",
+    "jsdom": "^31.0.0",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "^5.1.0",
+    "karma-junit-reporter": "^2.0.1",
+    "karma-webpack": "^5.0.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.69.0",
-    "vite": "^8.3.0"
+    "vite": "^8.3.0",
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.2.3"
   }
 }
